@@ -63,6 +63,14 @@ for (let desc of descriptions.values()){
 
      const header = document.querySelector("header");
      header.appendChild(newElement);
+     const main = document.querySelector("main");
+     const park = main.querySelector('.park-display'){
+         
+
+       //remove park
+         main.removeChild(park);
+     }
+
 
 
 
