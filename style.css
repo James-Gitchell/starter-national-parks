@@ -112,6 +112,13 @@ main {
   font-shadow: 1px 1px rgba(0,0,0,0.2);
   text-align: center;
 }
+.header-statement {
+  color: #320daa;
+  font-size: 1.5rem;
+  font-style:italic;
+  font-shadow: 1px 1px rgba(41, 41, 41, 0.2);
+  text-align: center;
+}
 
 @media screen and (min-width: 600px) {
   main {
