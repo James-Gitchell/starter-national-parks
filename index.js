@@ -1,5 +1,5 @@
 console.log(document);
-
+/*
 const heading = document.querySelector("h1");
 console.log(heading);
 
@@ -24,22 +24,41 @@ const dividersAll = document.querySelector("div.value");
 for (let element of dividersAll.values()) {
     console.log(element);
 }
-
-
-/*
-Do this
-Select elements
-For each of the elements described below, write a statement in the index.js file to find the element. To check that you found the right element, you may log the element that you find to the console.
-
-Find an element with the class value.
-
-Find a <button> element.
-
-Find an element with the class area.
-
-Find a <div> that is a descendant of an element with the class stat. (Hint: Look up descendant selectors in the documentation).
-
-Find an element with the class hello. Take careful note of what is returned there.
-
-Collections of elements with
 */
+
+const descriptions = document.querySelectorAll(".description-display");
+for (let desc of descriptions.values()){
+    let content = desc.innerText;
+    
+
+     if (content.length > 250){
+         content = content.slice(0, 250);
+         content = content + '<a href="#">...</a>';
+         }
+        desc.innerHTML = content;
+     }
+
+     /*const ratings = document.querySelectorAll(".rating-display .value");*/
+
+     const ratings = document.querySelectorAll(".rating-display .value");
+     for (let rating of ratings) {
+         let ratingValue = parseFloat(rating.innerText);
+        
+         if(ratingValue > 4.7){
+             rating.style.fontWeight = "bold";
+             rating.style.color = "#3ba17c";
+             rating.classList.add('high-rating');
+             rating.classList.remove("value");
+
+         }
+     }
+
+     const parks = querySelectorAll(".park-display");
+     const numberParks = parks.length;
+
+     const newElement = document.createElement("div");
+
+     newElement.innerText = `${numberParks} exciting parks to visit`;
+     
+
+
